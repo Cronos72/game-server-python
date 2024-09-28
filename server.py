@@ -11,7 +11,7 @@ async def echo(websocket):
         await websocket.send(test(message))
 
 async def main():
-    async with serve(echo, "localhost", 8765):
+    async with serve(echo, "https://server-py-cronos72-dev.apps.sandbox-m3.1530.p1.openshiftapps.com", 8080):
         await asyncio.get_running_loop().create_future()  # run forever
 
 asyncio.run(main())
